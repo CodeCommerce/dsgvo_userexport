@@ -1,0 +1,3 @@
+INSERT INTO `oxcontents` (`OXID`, `OXLOADID`, `OXSHOPID`, `OXSNIPPET`, `OXTYPE`, `OXACTIVE`, `OXACTIVE_1`, `OXPOSITION`, `OXTITLE`, `OXCONTENT`, `OXTITLE_1`, `OXCONTENT_1`, `OXACTIVE_2`, `OXTITLE_2`, `OXCONTENT_2`, `OXACTIVE_3`, `OXTITLE_3`, `OXCONTENT_3`, `OXCATID`, `OXFOLDER`, `OXTERMVERSION`, `OXTIMESTAMP`)
+VALUES
+	('e44dd16ba472a81a025fdbba2c2af26f', 'cc_dsgvo_userdata', 'oxbaseshop', 1, 0, 1, 0, '', 'DSGVO Datenexport', 'Sehr geehrte Damen und Herren,\r\n\r\nanbei erhalten Sie die von uns gespeicherten Daten in einer Maschinenlesbaren Form (json).\r\n', '', '', 0, '', '', 0, '', '', '943a9ba3050e78b443c16e043ae60ef3', 'CMSFOLDER_EMAILS', '', '2018-06-06 16:18:08');
