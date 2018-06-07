@@ -75,7 +75,7 @@ class cc_dsgvo_userdata_export extends oxAdminView
      * Place your external functions here
      * @return array
      */
-    public funtion externalDataHook()
+    public function externalDataHook()
     {
         return [];
     }
