@@ -14,6 +14,12 @@ class cc_dsgvo_userdata_export extends oxAdminView
      */
     protected $sUserId;
 
+    /**
+     * @var object
+     * current oxuser object
+     */
+    protected $oUser;
+
     protected $_sThisTemplate = 'cc_dsgvo_userdata_export.tpl';
 
     /**
@@ -79,7 +85,25 @@ class cc_dsgvo_userdata_export extends oxAdminView
     {
         return [];
     }
-    
+
+    /**
+     * get current user object
+     */
+    public function getUser()
+    {
+        if (NULL === $this->oUser) {
+            $oUser = oxNew('oxuser');
+            if ($oUser->load($this->sUserId)) {
+                $this->oUser = $oUser;
+                return $this->oUser;
+            }
+
+            return FALSE;
+        }
+
+        return $this->oUser;
+    }
+
     /**
      * sends mail with attached export file
      */
@@ -136,9 +160,13 @@ class cc_dsgvo_userdata_export extends oxAdminView
         return FALSE;
     }
 
+    /**
+     * return user file name
+     * @return string
+     */
     public function getUserExportFilename()
     {
-        return "userdata_" . substr($this->sUserId, 0, 8) . ".json";
+        return "userdata_" . md5($this->sUserId . $this->getUser()->getFieldData('oxusername')) . ".json";
     }
 
     /**
