@@ -14,3 +14,7 @@ Kopieren Sie den Ordner 'copy_this' in das Root Verzeichnis Ihres Shops.
 Aktivieren Sie das Modul unter 'Erweiterungen'/'Module'.
 
 Sie können den Text der E-Mail unter der CMS-Seite 'cc_dsgvo_userdata' anpassen und in andere Sprachen übersetzen. 
+
+## Erweiterungen
+
+Um die Ausgabe der Daten zu erweitern nutzen Sie bitte die Funktion cc_dsgvo_userdata_export::externalDataHook()
