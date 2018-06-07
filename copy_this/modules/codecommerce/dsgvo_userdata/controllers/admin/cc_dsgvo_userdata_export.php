@@ -56,6 +56,7 @@ class cc_dsgvo_userdata_export extends oxAdminView
             $aData['oxvouchers'] = $this->getOxvouchers();
             $aData['oxpayments'] = $this->getUserPayments();
             $aData['oxacceptedterms'] = $this->getOxacceptedterms();
+            $aData = array_merge($aData, $this->externalDataHook());
 
             fwrite($f, json_encode($aData));
 
@@ -70,6 +71,15 @@ class cc_dsgvo_userdata_export extends oxAdminView
         return FALSE;
     }
 
+    /**
+     * Place your external functions here
+     * @return array
+     */
+    public funtion externalDataHook()
+    {
+        return [];
+    }
+    
     /**
      * sends mail with attached export file
      */
