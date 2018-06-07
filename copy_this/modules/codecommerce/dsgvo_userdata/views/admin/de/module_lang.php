@@ -1,11 +1,8 @@
 <?php
 /**
- * Copyright (c) 2017
+ * Copyright (c) 2018
  * CodeCommerce - Christopher Bauer
  * www.codecommerce.de
- *
- * @version 1.0
- * @package codecommerce_facebook
  */
 
 $sLangName = 'Deutsch';
